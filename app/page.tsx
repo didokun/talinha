@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Independent app studio | Talinha Studio",
-  description: "Meet Talinha Studio and explore Tidiva, our room-by-room cleaning planner for iPhone.",
+  description: "Talinha Studio makes helpful apps that make everyday life easier. Meet Tidiva, our cleaning planner for iOS.",
 };
 
 export default function HomePage() {
@@ -14,7 +14,7 @@ export default function HomePage() {
         <section className="hero">
           <div>
             <h1>Small tools for <em>everyday life.</em></h1>
-            <p>We’re Talinha Studio. Our first iPhone app, Tidiva, helps you find room for housework in a week that’s already full.</p>
+            <p>Talinha Studio is an app studio making useful mobile apps that make everyday life easier. Our first iOS app, Tidiva, helps you fit home care into a week that’s already full.</p>
             <Button asChild className="cta">
               <a href="/tidiva/">Explore Tidiva →</a>
             </Button>
@@ -24,8 +24,8 @@ export default function HomePage() {
           </div>
         </section>
         <section className="strip">
-          <h2>Built around your week.</h2>
-          <p>In the office Monday through Wednesday? With Tidiva, you can leave those days free, pick the rooms that need attention, and see what fits on Thursday.</p>
+          <h2>Apps for everyday life.</h2>
+          <p>We make practical apps around the routines people already have. Tidiva is our first iOS app: choose the rooms that need attention, leave busy days free, and find a manageable time for home care.</p>
         </section>
       </main>
     </SiteFrame>
