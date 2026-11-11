@@ -1,11 +1,4 @@
 import type { Metadata } from "next";
-import { TidivaSupportPage } from "@/components/TidivaPages";
-
-export const metadata: Metadata = {
-  title: "Contact and support | Talinha Studio",
-  description: "Contact Talinha Studio for help with Tidiva, our iOS app, including subscriptions, reminders, calendar events, and privacy requests.",
-};
-
-export default function ContactPage() {
-  return <TidivaSupportPage />;
-}
+import { SiteFrame } from "@/components/SiteFrame";
+export const metadata: Metadata = { title: "Contact Talinha Studio | Talinha Studio", description: "Contact Talinha Studio: Tidiva and Studaya." };
+export default function Page() { return <SiteFrame footerCurrent="Contact"><main id="main"><article className="copy"><h1>Contact Talinha Studio</h1><p className="intro">For help with our apps, choose your product below or email us. Include your device model, operating system and app version. Please do not send passwords or payment details.</p><p><a href="mailto:support@talinha.com">support@talinha.com</a></p><h2>Our apps</h2><p><a href="/tidiva/contact/">Tidiva — contact</a></p><p><a href="/studaya/contact/">Studaya — contact</a></p></article></main></SiteFrame>; }

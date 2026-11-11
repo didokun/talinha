@@ -2,14 +2,15 @@ import type { ReactNode } from "react";
 
 type SiteFrameProps = {
   children: ReactNode;
-  current?: "Studio" | "Tidiva" | "Contact";
+  current?: "Studio" | "Tidiva" | "Studaya" | "Contact";
   footerCurrent?: "Contact" | "Privacy" | "Legal";
   productScoped?: boolean;
+  product?: "tidiva" | "studaya";
 };
 
-export function SiteFrame({ children, current, footerCurrent, productScoped = false }: SiteFrameProps) {
+export function SiteFrame({ children, current, footerCurrent, productScoped = false, product = "tidiva" }: SiteFrameProps) {
   const paths = productScoped
-    ? { contact: "/tidiva/contact/", privacy: "/tidiva/privacy/", legal: "/tidiva/legal/" }
+    ? { contact: `/${product}/contact/`, privacy: `/${product}/privacy/`, legal: `/${product}/legal/` }
     : { contact: "/contact/", privacy: "/privacy/", legal: "/legal/" };
 
   return (
@@ -23,6 +24,7 @@ export function SiteFrame({ children, current, footerCurrent, productScoped = fa
           <nav aria-label="Main">
             <a href="/" aria-current={current === "Studio" ? "page" : undefined}>Studio</a>
             <a href="/tidiva/" aria-current={current === "Tidiva" ? "page" : undefined}>Tidiva</a>
+            <a href="/studaya/" aria-current={current === "Studaya" ? "page" : undefined}>Studaya</a>
             <a href={paths.contact} aria-current={current === "Contact" ? "page" : undefined}>Contact</a>
           </nav>
         </header>

@@ -1,11 +1,4 @@
 import type { Metadata } from "next";
-import { TidivaPrivacyPage } from "@/components/TidivaPages";
-
-export const metadata: Metadata = {
-  title: "Privacy policy | Talinha Studio",
-  description: "Learn how Talinha Studio and Tidiva, our iOS app, handle app, calendar, purchase, advertising, website, and support data.",
-};
-
-export default function PrivacyPage() {
-  return <TidivaPrivacyPage />;
-}
+import { SiteFrame } from "@/components/SiteFrame";
+export const metadata: Metadata = { title: "Privacy at Talinha Studio | Talinha Studio", description: "Privacy at Talinha Studio: Tidiva and Studaya." };
+export default function Page() { return <SiteFrame footerCurrent="Privacy"><main id="main"><article className="copy"><h1>Privacy at Talinha Studio</h1><p className="intro">Each app has its own privacy policy covering its features and data handling. Choose your app below. This website has no analytics scripts or contact form. Our hosting provider may process IP addresses and request metadata to deliver and protect the site. If you contact support, we use your email and message to respond and keep correspondence as needed for support and applicable obligations. Contact us about information you have sent to us.</p><p><a href="mailto:support@talinha.com">support@talinha.com</a></p><h2>Our apps</h2><p><a href="/tidiva/privacy/">Tidiva — privacy</a></p><p><a href="/studaya/privacy/">Studaya — privacy</a></p></article></main></SiteFrame>; }

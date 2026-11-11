@@ -1,11 +1,4 @@
 import type { Metadata } from "next";
-import { TidivaTermsPage } from "@/components/TidivaPages";
-
-export const metadata: Metadata = {
-  title: "Tidiva terms and purchase information | Talinha Studio",
-  description: "Publisher details, app licensing, subscriptions, lifetime purchases, and privacy information for Tidiva by Talinha Studio.",
-};
-
-export default function LegalPage() {
-  return <TidivaTermsPage />;
-}
+import { SiteFrame } from "@/components/SiteFrame";
+export const metadata: Metadata = { title: "Legal and app terms | Talinha Studio", description: "Legal and app terms: Tidiva and Studaya." };
+export default function Page() { return <SiteFrame footerCurrent="Legal"><main id="main"><article className="copy"><h1>Legal and app terms</h1><p className="intro">Talinha Studio develops and publishes Tidiva and Studaya. For licensing, purchases and app-specific terms, choose your product below. For publisher or legal inquiries, email support@talinha.com.</p><p><a href="mailto:support@talinha.com">support@talinha.com</a></p><h2>Our apps</h2><p><a href="/tidiva/legal/">Tidiva — legal</a></p><p><a href="/studaya/legal/">Studaya — legal</a></p></article></main></SiteFrame>; }
