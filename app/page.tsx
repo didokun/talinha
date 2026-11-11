@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SiteFrame } from "@/components/SiteFrame";
 import { Button } from "@/components/ui/button";
+import { TidivaAppStoreBadge } from "@/components/TidivaAppStoreBadge";
 
 export const metadata: Metadata = {
   title: "Independent app studio | Talinha Studio",
@@ -25,7 +26,15 @@ export default function HomePage() {
           </div>
         </section>
         <section id="apps" className="app-cards">
-          <article><div className="product"><img src="/assets/tidiva.png" alt="" />Tidiva</div><h2>A calmer home.</h2><p>Plan your rooms, chores and routines around the week you actually have.</p><Button asChild className="cta"><a href="/tidiva/">Explore Tidiva →</a></Button></article>
+          <article>
+            <div className="product"><img src="/assets/tidiva.png" alt="" />Tidiva</div>
+            <h2>A calmer home.</h2>
+            <p>Plan your rooms, chores and routines around the week you actually have.</p>
+            <div className="product-actions">
+              <TidivaAppStoreBadge />
+              <Button asChild className="cta"><a href="/tidiva/">Explore Tidiva →</a></Button>
+            </div>
+          </article>
           <article><div className="product"><img src="/assets/studaya/icon.png" alt="" />Studaya</div><h2>A clearer study day.</h2><p>Organize subjects, prepare for deadlines and make space for focused revision.</p><Button asChild className="cta"><a href="/studaya/">Explore Studaya →</a></Button></article>
         </section>
         <section className="strip">

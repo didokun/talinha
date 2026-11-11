@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SiteFrame } from "@/components/SiteFrame";
 import { Button } from "@/components/ui/button";
+import { TidivaAppStoreBadge } from "@/components/TidivaAppStoreBadge";
 
 export const metadata: Metadata = {
   title: "Tidiva cleaning planner for iPhone | Talinha Studio",
@@ -16,9 +17,12 @@ export default function TidivaPage() {
             <div className="product"><img src="/assets/tidiva.png" alt="" />Tidiva · an iOS app by Talinha Studio</div>
             <h1>Your chores,<br /><em>at your pace.</em></h1>
             <p>Tidiva is a cleaning-planner app for iPhone from Talinha Studio. Pick your rooms, set aside your office days, and give each task a place on your calendar.</p>
-            <Button asChild className="cta">
-              <a href="#tour">See how it works ↓</a>
-            </Button>
+            <div className="product-actions">
+              <TidivaAppStoreBadge />
+              <Button asChild className="cta">
+                <a href="#tour">See how it works ↓</a>
+              </Button>
+            </div>
           </div>
           <div className="art">
             <img className="phone" src="/assets/today.jpg" alt="Tidiva’s Today screen with weekly progress and three cleaning tasks" />
